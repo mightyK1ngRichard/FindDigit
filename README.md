@@ -1,8 +1,8 @@
 # FindDigit
  iOS simple game
 # Игра: Найди число. 
-- [ ] таймер
-- [ ] дизайн
+- [X] таймер
+- [X] дизайн
 - [ ] слайды
 
-<img class="screen_application" src="apple.png" width="300">
+<img class="screen_application" src="screens\preview.png" align="center" width="1000">
