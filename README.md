@@ -5,4 +5,4 @@
 - [X] дизайн
 - [ ] слайды
 
-<img class="screen_application" src="screens\preview.png" align="center" width="1000">
+<img class="screen_application" src="https://github.com/mightyK1ngRichard/FindDigit/blob/main/Screens/Preview.png" width="1000">
