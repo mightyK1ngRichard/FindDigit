@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet var buttons: [UIButton]! // Коллекция кнопок.
     @IBOutlet weak var timerLabel: UILabel!
-    lazy var game = Game(countItems: buttons.count, timerForGame: 30) { [weak self] (status, time) in
+    lazy var game = Game(countItems: buttons.count) { [weak self] (status, time) in
         guard let self = self else { return }
         self.timerLabel.text = time.textForTimer()
         self.updateInfoGame(with: status)
@@ -25,6 +25,11 @@ class GameViewController: UIViewController {
         setupScreen()
     }
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
+    }
     
     // Нажатие на кнопку.
     @IBAction func pressButton(_ sender: UIButton) {

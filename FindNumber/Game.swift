@@ -44,11 +44,11 @@ class Game {
     private var updateTimer: ((StatusGame, Int) -> Void)
     
     
-    init(countItems: Int, timerForGame time: Int, updateTimer: @escaping (_ status: StatusGame, _ seconds: Int) -> Void) {
+    init(countItems: Int, updateTimer: @escaping (_ status: StatusGame, _ seconds: Int) -> Void) {
         self.countItems = countItems
-        self.secondsGame = time
+        self.timeForGame = Settings.shared.currentSettings.timeForGame
+        self.secondsGame = self.timeForGame
         self.updateTimer = updateTimer
-        self.timeForGame = time
         setupGame()
     }
     
@@ -63,9 +63,12 @@ class Game {
         // Загадываем число для поиска.
         nextItem = items.shuffled().first
         updateTimer(status, secondsGame)
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
-            self?.secondsGame -= 1
-        })
+        if Settings.shared.currentSettings.timerState {
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (_) in
+                self?.secondsGame -= 1
+            })
+        }
+        
     }
     
     
@@ -91,7 +94,7 @@ class Game {
         setupGame()
     }
     
-    private func stopGame() {
+    func stopGame() {
         timer?.invalidate()
     }
     

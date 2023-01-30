@@ -9,18 +9,21 @@
 /* Begin PBXBuildFile section */
 		2C6E0372298504700063C285 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E0371298504700063C285 /* GameViewController.swift */; };
 		2C6E037429850A9D0063C285 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E037329850A9D0063C285 /* Game.swift */; };
-		2C87A4252986ADB100BA90C0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87A4242986ADB100BA90C0 /* TestViewController.swift */; };
+		2CA7FD532987E286003A96FA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7FD522987E286003A96FA /* SettingsTableViewController.swift */; };
+		2CA7FD5529880AD0003A96FA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7FD5429880AD0003A96FA /* Settings.swift */; };
 		2CD68A8C2984E02C003FB657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD68A8B2984E02C003FB657 /* AppDelegate.swift */; };
 		2CD68A8E2984E02C003FB657 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD68A8D2984E02C003FB657 /* SceneDelegate.swift */; };
 		2CD68A932984E02C003FB657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD68A912984E02C003FB657 /* Main.storyboard */; };
 		2CD68A952984E02D003FB657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD68A942984E02D003FB657 /* Assets.xcassets */; };
 		2CD68A982984E02D003FB657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD68A962984E02D003FB657 /* LaunchScreen.storyboard */; };
+		2CDFE0702987E1BD00A413D9 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFE06F2987E1BD00A413D9 /* SelectTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C6E0371298504700063C285 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2C6E037329850A9D0063C285 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		2C87A4242986ADB100BA90C0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		2CA7FD522987E286003A96FA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2CA7FD5429880AD0003A96FA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2CD68A882984E02C003FB657 /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD68A8B2984E02C003FB657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD68A8D2984E02C003FB657 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		2CD68A942984E02D003FB657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CD68A972984E02D003FB657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CD68A992984E02D003FB657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CDFE06F2987E1BD00A413D9 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 				2CD68A992984E02D003FB657 /* Info.plist */,
 				2C6E0371298504700063C285 /* GameViewController.swift */,
 				2C6E037329850A9D0063C285 /* Game.swift */,
-				2C87A4242986ADB100BA90C0 /* TestViewController.swift */,
+				2CDFE06F2987E1BD00A413D9 /* SelectTimeViewController.swift */,
+				2CA7FD522987E286003A96FA /* SettingsTableViewController.swift */,
+				2CA7FD5429880AD0003A96FA /* Settings.swift */,
 			);
 			path = FindNumber;
 			sourceTree = "<group>";
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C87A4252986ADB100BA90C0 /* TestViewController.swift in Sources */,
 				2CD68A8C2984E02C003FB657 /* AppDelegate.swift in Sources */,
+				2CDFE0702987E1BD00A413D9 /* SelectTimeViewController.swift in Sources */,
+				2CA7FD532987E286003A96FA /* SettingsTableViewController.swift in Sources */,
 				2C6E0372298504700063C285 /* GameViewController.swift in Sources */,
+				2CA7FD5529880AD0003A96FA /* Settings.swift in Sources */,
 				2CD68A8E2984E02C003FB657 /* SceneDelegate.swift in Sources */,
 				2C6E037429850A9D0063C285 /* Game.swift in Sources */,
 			);
