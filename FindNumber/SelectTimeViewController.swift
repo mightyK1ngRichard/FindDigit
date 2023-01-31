@@ -11,6 +11,7 @@ class SelectTimeViewController: UIViewController {
     var data = [Int]()
     @IBOutlet weak var tableView: UITableView! {
         didSet {
+            tableView?.dataSource = self
             tableView?.delegate = self
         }
     }
@@ -19,6 +20,7 @@ class SelectTimeViewController: UIViewController {
 //         tableView.reloadData() // Это если обновлю число столбцов.
     }
 }
+
 
 extension SelectTimeViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,14 +36,8 @@ extension SelectTimeViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Когда выбираем число, подсвечивается ячейка.
         tableView.deselectRow(at: indexPath, animated: true)
-        UserDefaults.standard.setValue(indexPath.row, forKey: "timeForGame")
-        UserDefaults.standard.integer(forKey: "timeForGame")
         Settings.shared.currentSettings.timeForGame = data[indexPath.row]
         navigationController?.popViewController(animated: true)
-        
-        // значение, которое выбрали.
-//        print(data[indexPath.row])
-        
     }
     
 }
